@@ -40,3 +40,23 @@ var persona = {
 }
 
 saludar2( fnTemporal, persona );
+
+
+////////// COMO LOS VALORES POR DEFECTO AFECTAN AL OBJETO ARGUMENTO ////
+
+
+function sumar( a, b) {
+    console.log(arguments);
+}
+
+sumar( 1, 2, 3, 'Lionel', {a:1, b:2})  // Se muestran todos 
+
+
+///////////
+
+
+function sumar( a = 1, b = 2) {
+    console.log(arguments);
+}
+
+sumar() // No se muentra nada ya que no estamos mandando ningun argumento
